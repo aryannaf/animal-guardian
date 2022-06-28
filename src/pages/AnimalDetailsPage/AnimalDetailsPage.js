@@ -1,10 +1,10 @@
 import React from 'react';
-import './AnimalPage.scss';
+import './AnimalDetailsPage.scss';
 import { Canvas } from '@react-three/fiber';
 import { Suspense } from 'react';
 import Landscape from './components/Landscape/Landscape';
 
-function AnimalPage() {
+function AnimalDetailsPage() {
     return (
         <div>
             <Canvas className="landscape">
@@ -16,4 +16,4 @@ function AnimalPage() {
     )
 }
 
-export default AnimalPage
+export default AnimalDetailsPage
