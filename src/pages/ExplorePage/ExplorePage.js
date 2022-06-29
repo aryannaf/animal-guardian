@@ -1,32 +1,60 @@
-import React from 'react';
+import { Component } from 'react';
 import './ExplorePage.scss';
 import { NavLink } from 'react-router-dom';
+import axios from 'axios';
 
-function ExplorePage() {
-  return (
-    <main>
-      <div>
-        <NavLink to="/animal/:speciesId">
-          <button>DISCOVER</button>
-        </NavLink>
-        <NavLink to="/categories/:categoryId">
-          <button>ALL</button>
-        </NavLink>
-        <NavLink to="/categories/:categoryId">
-          <button>CRITICALLY ENDANGERED</button>
-        </NavLink>
-        <NavLink to="/categories/:categoryId">
-          <button>ENDANGERED</button>
-        </NavLink>
-        <NavLink to="/categories/:categoryId">
-          <button>VULNERABLE</button>
-        </NavLink>
-        <NavLink to="/categories/:categoryId">
-          <button>NEAR THREATENED</button>
-        </NavLink>
-      </div>
-    </main>
-  )
+
+const API_URL = "http://localhost:5050";
+
+class ExplorePage extends Component {
+
+  state = {
+    categories: null
+  }
+
+  componentDidMount() {
+    axios
+        .get(`${API_URL}/categories`)
+        .then((response) => {
+          this.setState({
+            categories: response.data
+          })
+        })
+        .catch(err => {
+          console.log(err)
+        })
+  }
+
+  render() {
+
+    const { categories } = this.state;
+
+    if(!categories) {
+      return <main>Loading, please wait...</main>
+    }
+
+    return (
+      <main>
+        <div>
+          <NavLink to="/animals/:speciesId">
+            <button>DISCOVER</button>
+          </NavLink>
+          <NavLink to="/animals">
+            <button>ALL</button>
+          </NavLink>
+          {
+            categories.map((category) => {
+              return (
+              <NavLink to={`/categories/${category.id}`} key={category.id}>
+                <button key={category.id}>{category.categoryName.toUpperCase()}</button>
+              </NavLink>
+              )
+            })
+          }
+        </div>
+      </main>
+    )
+  }
 }
 
 export default ExplorePage
