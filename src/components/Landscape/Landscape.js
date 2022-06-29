@@ -1,8 +1,17 @@
-import React from 'react'
+import React from 'react';
+import './Landscape.scss';
+import { Canvas } from '@react-three/fiber';
+import { Suspense } from 'react';
 
 function Landscape() {
   return (
-    <div>Landscape</div>
+    <div>
+      <Canvas className="landscape">
+        <Suspense fallback={null}>
+
+        </Suspense>
+      </Canvas>
+    </div>
   )
 }
 
