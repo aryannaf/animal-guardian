@@ -25,6 +25,10 @@ class ExplorePage extends Component {
         })
   }
 
+  randomize = (max) => {
+    return Math.floor(Math.random() * max);
+  }
+
   render() {
 
     const { categories } = this.state;
@@ -36,7 +40,7 @@ class ExplorePage extends Component {
     return (
       <main>
         <div>
-          <NavLink to="/animals/:speciesId">
+          <NavLink to={`/animals/${this.randomize(60)}`}>
             <button>DISCOVER</button>
           </NavLink>
           <NavLink to="/animals">
