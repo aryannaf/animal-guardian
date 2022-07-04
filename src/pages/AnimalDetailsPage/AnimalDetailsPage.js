@@ -1,11 +1,6 @@
 import { Component } from 'react';
 import './AnimalDetailsPage.scss';
 import axios from 'axios';
-import Landscape1 from '../../components/Landscape1/Landscape1';
-import Landscape2 from '../../components/Landscape2/Landscape2';
-import { AdditiveAnimationBlendMode } from 'three';
-import AnimalListPage from '../AnimalListPage/AnimalListPage';
-
 import LandscapeRender from '../../components/LandscapeRender/LandscapeRender';
 
 
@@ -37,18 +32,6 @@ class AnimalDetailsPage extends Component {
         if (!animalDetails) {
             return <main>Loading, please wait...</main>;
         }
-
-        // const renderLandscape = () => {
-        //     if (animalDetails.id === 1) {
-        //         return <Landscape1 />
-        //     }
-        //     else {
-        //         return <Landscape2 />
-        //     }
-        // }
-
-        
-        
 
             return (
                 <main>

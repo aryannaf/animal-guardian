@@ -1,5 +1,5 @@
 import React from 'react';
-import './Landscape3.scss';
+import './Landscape16.scss';
 import { Canvas } from '@react-three/fiber';
 import { Suspense } from 'react';
 import { useLoader } from '@react-three/fiber';
@@ -9,9 +9,9 @@ import { Environment, OrbitControls, PerspectiveCamera } from "@react-three/drei
 import * as THREE from 'three';
 
 
-function Landscape3() {
+function Landscape16() {
 
-  const gltf = useLoader(GLTFLoader, '/models/black-rhino.glb');
+  const gltf = useLoader(GLTFLoader, '/models/yangtze-finless-porpoise.glb');
 
   return (
     <div className="landscape">
@@ -22,7 +22,7 @@ function Landscape3() {
           <OrbitControls />
 
           <mesh>
-            <primitive object={gltf.scene} scale={0.5}/>
+            <primitive object={gltf.scene} scale={0.6}/>
           </mesh>
 
           <ambientLight args={["#ffffff", 1]} />
@@ -41,4 +41,4 @@ function Landscape3() {
   )
 }
 
-export default Landscape3
+export default Landscape16
