@@ -1,1 +1,89 @@
 @use '../../styles/global.scss' as *;
+@use '../../styles/partials/colors' as *;
+
+.explore {
+    background: url('../../assets/images/background.jpg');
+    padding: .5rem;
+    padding-top: 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &__container {
+        border: 3px solid $primary-highlight;
+        box-shadow: 0 0 5px $secondary-highlight;
+        border-top: none;
+        border-radius: 4px;
+        padding: 1rem;
+        background-color: $primary-background;
+    }
+
+    &__guide {
+        color: $primary-text;
+        font-weight: 300;
+        margin-bottom: 2rem;
+        letter-spacing: .1rem;
+        border-radius: 4px;
+        border: 1px solid $primary-highlight;
+        padding: 1rem;
+
+        &--discover {
+            font-weight: 600;
+            letter-spacing: .2rem;
+        }
+    }
+
+    &__options {
+        
+    }
+
+    &__button {
+        height: 4rem;
+        width: 100%;
+        border-radius: 4px;
+        border: 1px solid $button-highlight;
+        background-color: $primary-background;
+        color: $button-highlight;
+        letter-spacing: .2rem;
+        font-weight: 500;
+        cursor: pointer;
+        margin-bottom: 1rem;
+
+        &:hover {
+            color: $secondary-highlight;
+            box-shadow: 0 0 5px $secondary-highlight;
+            text-shadow: 0 0 5px $secondary-highlight;
+        }
+
+        &-link {
+
+        }
+    }
+
+    &__categories {
+
+    }
+
+    &__category {
+        height: 4rem;
+        width: 100%;
+        border-radius: 4px;
+        border: 1px solid $button-highlight;
+        background-color: $primary-background;
+        color: $button-highlight;
+        letter-spacing: .2rem;
+        font-weight: 500;
+        cursor: pointer;
+        margin-bottom: 1rem;
+
+        &:hover {
+            color: $secondary-highlight;
+            box-shadow: 0 0 5px $secondary-highlight;
+            text-shadow: 0 0 5px $secondary-highlight;
+        }
+
+        &-link {
+
+        }
+    }
+}
