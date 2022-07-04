@@ -11,7 +11,7 @@ import * as THREE from 'three';
 
 function Landscape2() {
 
-  const gltf = useLoader(GLTFLoader, '/models/sumatran-elephant.glb');
+  const gltf = useLoader(GLTFLoader, '/models/amur-leopard.glb');
 
   return (
     <div className="landscape">
@@ -22,7 +22,7 @@ function Landscape2() {
           <OrbitControls />
 
           <mesh>
-            <primitive object={gltf.scene} scale={0.4}/>
+            <primitive object={gltf.scene} scale={0.6}/>
           </mesh>
 
           <ambientLight args={["#ffffff", 1]} />
