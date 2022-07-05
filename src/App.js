@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import './App.scss';
+import HomePage from './pages/HomePage/HomePage';
+import Header from './components/Header/Header';
+import ExplorePage from './pages/ExplorePage/ExplorePage';
+import AnimalDetailsPage from './pages/AnimalDetailsPage/AnimalDetailsPage';
+import AnimalListPage from './pages/AnimalListPage/AnimalListPage';
+import FullAnimalListPage from './pages/FullAnimalListPage/FullAnimalListPage';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Header />
+      <Switch>
+        <Route path="/" exact component={HomePage}/>
+        <Route path="/explore" component={ExplorePage}/>
+        <Route path="/categories/:categoryId" component={AnimalListPage}/>
+        <Route path="/animals" exact component={FullAnimalListPage}/>
+        <Route path="/animals/:speciesId" component={AnimalDetailsPage}/>
+      </Switch>
+      <Footer />
+    </BrowserRouter>
   );
 }
 

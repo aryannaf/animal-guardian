@@ -1,0 +1,204 @@
+@use '../../styles/global.scss' as *;
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/mixins' as *;
+
+.explore {
+    background: url('../../assets/images/background.jpg');
+    padding: 0 .5rem;
+    display: flex;
+    align-items: center;
+
+    @include tablet {
+        padding: 0 1rem;
+    }
+
+    @include desktop {
+      padding: 0 1.5rem;
+  }
+
+    &__container {
+        border: 3px solid $primary-highlight;
+        box-shadow: 0 0 5px $secondary-highlight;
+        border-top: none;
+        border-bottom: none;
+        border-radius: 4px;
+        padding: 1rem;
+        padding-bottom: 5rem;
+        background-color: $primary-background;
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include tablet {
+            padding: 1.5rem;
+            padding-bottom: 4rem;
+        }
+
+        @include desktop {
+          padding: 3rem;
+          padding-bottom: 4rem;
+      }
+    }
+
+    &__wrapper {
+      position: relative;
+      max-width: 28rem;
+      display: flex;
+    }
+
+    &__circle-container {
+      @include on-circle($item-count: 6, $circle-size: 20em, $item-size: 8em); 
+      margin: 5em auto 0;
+
+      @include tablet {
+        @include on-circle($item-count: 6, $circle-size: 28em, $item-size: 10em);
+      }
+
+      @include desktop {
+        @include on-circle($item-count: 6, $circle-size: 32em, $item-size: 12em);
+      }
+    }
+
+    &__guide {
+        color: $primary-text;
+        font-weight: 300;
+        margin-bottom: 2rem;
+        letter-spacing: .1rem;
+        border-radius: 4px;
+        border: 1px solid $primary-highlight;
+        padding: 1rem;
+        width: 100%;
+
+        @include tablet {
+            margin-bottom: 4rem;
+            margin-top: 2rem;
+        }
+
+        &--discover {
+            font-weight: 600;
+            letter-spacing: .2rem;
+        }
+    }
+
+    &__button {
+        height: 4rem;
+        width: 100%;
+        border-radius: 50px;
+        border: 1px solid $button-highlight;
+        background-color: $primary-background;
+        color: $button-highlight;
+        letter-spacing: .2rem;
+        font-weight: 500;
+        cursor: pointer;
+        margin-bottom: 1rem;
+
+        @include tablet {
+            margin-bottom: 1.5rem;
+        }
+
+        @include desktop {
+          margin-bottom: 2rem;
+      }
+
+        &:hover {
+            color: $secondary-highlight;
+            box-shadow: 0 0 5px $secondary-highlight;
+            text-shadow: 0 0 5px $secondary-highlight;
+        }
+    }
+
+    &__category {
+        height: 4rem;
+        width: 100%;
+        border-radius: 50px;
+        border: 1px solid $button-highlight;
+        background-color: $primary-background;
+        color: $button-highlight;
+        letter-spacing: .2rem;
+        font-weight: 500;
+        cursor: pointer;
+        margin-bottom: 1rem;
+
+        @include tablet {
+            margin-bottom: 1.5rem;
+        }
+
+        @include desktop {
+            margin-bottom: 2rem;
+        }
+
+        &:hover {
+            color: $secondary-highlight;
+            box-shadow: 0 0 5px $secondary-highlight;
+            text-shadow: 0 0 5px $secondary-highlight;
+        }
+
+        &-link {
+            @include tablet {
+                width: 48%;
+            }
+
+            @include desktop {
+                width: 48.5%;
+            }
+        }
+    }
+}
+
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #ededed00;
+  position: absolute;
+  top: 7.25rem;
+  left: 4rem;
+
+  @include tablet {
+    top: 10.5rem;
+    left: 8rem;
+  }
+
+  @include desktop {
+    top: 11.25rem;
+    left: 8rem;
+  }
+}
+
+.menu-button{
+	transition: fill 500ms;
+}
+
+.outer-circle {
+	transform-origin: 60px 60px;
+	transition: transform 2s cubic-bezier(0.620, 0.005, 0.000, 1.005);
+}
+
+.button {
+	max-width: 12rem;
+	background: none;
+	border: 0 none;
+	font-size: 0;
+	cursor: pointer;
+	
+	svg {
+		width: 100%;
+		height: auto;
+	}
+	
+	&:hover {
+		
+		.menu-button {
+			fill: red;
+		}
+		
+		.outer-circle {
+			transform: rotate(360deg);
+		}
+		
+	}
+	
+}

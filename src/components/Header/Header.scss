@@ -1,0 +1,148 @@
+@use '../../styles/global.scss' as *;
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/mixins' as *;
+
+.header {
+    background: url('../../assets/images/background.jpg');
+    padding: .5rem;
+    padding-bottom: 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @include tablet {
+        flex-wrap: nowrap;
+        padding: 1rem;
+        padding-bottom: 0;
+    }
+
+    @include desktop {
+        padding: 1.5rem;
+        padding-bottom: 0;
+    }
+
+    &__contents {
+        border: 3px solid $primary-highlight;
+        box-shadow: 0 0 5px $secondary-highlight;
+        border-bottom: none;
+        border-radius: 4px;
+        padding: 1rem;
+        background-color: $primary-background;
+        width: 100%;
+
+        @include tablet {
+            display: flex;
+            padding: 1.5rem;
+        }
+
+        @include desktop {
+            padding: 3rem;
+        }
+    }
+
+    &__logo {
+        
+        @include tablet {
+            margin-right: 1rem;
+        }
+
+        @include desktop {
+            margin-right: 2rem;
+        }
+
+        &-link {
+
+        }
+    
+        &-image {
+            width: 100%;
+            border-radius: 4px;
+            box-shadow: 0 0 5px $secondary-highlight;
+
+            @include tablet {
+                width: 26rem;
+            }
+
+            @include desktop {
+                width: 40rem;
+            }
+        }
+    }
+
+    &__nav {
+        margin-top: 1rem;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        @include tablet {
+            flex-direction: column;
+            margin-top: 0;
+            height: 6rem;
+        }
+
+        @include desktop {
+            height: 9.25rem;
+        }
+
+        &-link {
+            width: 45%;
+
+            @include tablet {
+                width: 100%;
+            }
+        }
+    }
+
+    &__about {
+        height: 2rem;
+        width: 100%;
+        border-radius: 4px;
+        border: 1px solid $button-highlight;
+        background-color: $primary-background;
+        color: $button-highlight;
+        letter-spacing: .2rem;
+        font-weight: 500;
+        cursor: pointer;
+
+        @include tablet {
+            height: 2.5rem;
+        }
+
+        @include desktop {
+            height: 3.75rem;
+        }
+
+        &:hover {
+            color: $secondary-highlight;
+            box-shadow: 0 0 5px $secondary-highlight;
+            text-shadow: 0 0 5px $secondary-highlight;
+        }
+    }
+
+    &__explore {
+        height: 2rem;
+        width: 100%;
+        border-radius: 4px;
+        border: 1px solid $button-highlight;
+        background-color: $primary-background;
+        color: $button-highlight;
+        letter-spacing: .2rem;
+        font-weight: 500;
+        cursor: pointer;
+
+        @include tablet {
+            height: 2.5rem;
+        }
+
+        @include desktop {
+            height: 3.75rem;
+        }
+
+        &:hover {
+            color: $secondary-highlight;
+            box-shadow: 0 0 5px $secondary-highlight;
+            text-shadow: 0 0 5px $secondary-highlight;
+        }
+    }
+}

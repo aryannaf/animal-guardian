@@ -1,0 +1,126 @@
+@use '../../styles/global.scss' as *;
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/mixins' as *;
+
+.species {
+    background: url('../../assets/images/background.jpg');
+    padding: 0 .5rem;
+    display: flex;
+    align-items: center;
+
+    @include tablet {
+        padding: 0 1rem;
+    }
+
+    @include desktop {
+        padding: 0 1.5rem;
+    }
+
+    &__container {
+        border: 3px solid $primary-highlight;
+        box-shadow: 0 0 5px $secondary-highlight;
+        border-top: none;
+        border-bottom: none;
+        border-radius: 4px;
+        padding: 1rem;
+        background-color: $primary-background;
+        width: 100%;
+
+        @include tablet {
+            padding: 1.5rem;
+        }
+
+        @include desktop {
+            padding: 3rem;
+        }
+    }
+
+    &__title {
+        border-radius: 4px;
+        border: 1px solid $primary-highlight;
+        padding: 0 1rem;
+        margin-bottom: 1rem;
+
+        @include tablet {
+            margin-bottom: 1.5rem;
+        }
+
+        @include desktop {
+            padding: 1rem 2rem;
+        }
+    }
+
+    &__category {
+        color: $primary-text;
+        font-size: 1.75rem;
+        letter-spacing: .4rem;
+        font-weight: 600;
+        text-shadow: 0 0 5px $secondary-highlight;
+
+        @include desktop {
+            font-size: 2rem;
+        }
+    }
+
+    &__list {
+
+        @include tablet {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 100%;
+        }
+    }
+
+    &__animal {
+        border-radius: 4px;
+        border: 1px solid $button-highlight;
+        margin-bottom: 1rem;
+        padding: 1rem;
+
+        @include tablet {
+            height: 23.75rem;
+        }
+
+        &:hover {
+            color: $secondary-highlight;
+            box-shadow: 0 0 5px $secondary-highlight;
+            text-shadow: 0 0 5px $secondary-highlight;
+        }
+
+        &-link {
+            text-decoration: inherit;
+
+            @include tablet {
+                width: 48%;
+                height: 25.5rem;
+            }
+
+            @include desktop {
+                width: 32%;
+            }
+        }
+
+        &__image {
+            width: 100%;
+            border-radius: 4px;
+            height: 15rem;
+            box-shadow: 0 0 5px $secondary-highlight;
+        }
+
+        &__name {
+            color: $button-highlight;
+            font-size: 1rem;
+            margin: .5rem 0;
+            margin-top: 1rem;
+            letter-spacing: .3rem;
+        }
+
+        &__scientific-name {
+            color: $button-highlight;
+            font-size: .88rem;
+            letter-spacing: .2rem;
+            margin-bottom: 0;
+        }
+    }
+}
