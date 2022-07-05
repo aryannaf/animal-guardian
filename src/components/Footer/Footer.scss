@@ -1,5 +1,6 @@
 @use '../../styles/global.scss' as *;
 @use '../../styles/partials/colors' as *;
+@use '../../styles/partials/mixins' as *;
 
 .footer {
     background: url('../../assets/images/background.jpg');
@@ -7,6 +8,11 @@
     padding-top: 0;
     display: flex;
     align-items: center;
+
+    @include tablet {
+        padding: 1rem;
+        padding-top: 0;
+    }
 
     &__container {
         border: 3px solid $primary-highlight;
@@ -16,6 +22,10 @@
         padding: 1rem;
         background-color: $primary-background;
         width: 100%;
+
+        @include tablet {
+            padding: 1.5rem;
+        }
     }
 
     &__copyright {

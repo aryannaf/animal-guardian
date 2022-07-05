@@ -1,21 +1,30 @@
 @use '../../styles/global.scss' as *;
 @use '../../styles/partials/colors' as *;
+@use '../../styles/partials/mixins' as *;
 
 .species {
     background: url('../../assets/images/background.jpg');
-    padding: .5rem;
-    padding-top: 0;
+    padding: 0 .5rem;
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
+
+    @include tablet {
+        padding: 0 1rem;
+    }
 
     &__container {
         border: 3px solid $primary-highlight;
         box-shadow: 0 0 5px $secondary-highlight;
         border-top: none;
+        border-bottom: none;
         border-radius: 4px;
         padding: 1rem;
         background-color: $primary-background;
+        width: 100%;
+
+        @include tablet {
+            padding: 1.5rem;
+        }
     }
 
     &__title {
@@ -23,6 +32,10 @@
         border: 1px solid $primary-highlight;
         padding: 0 1rem;
         margin-bottom: 1rem;
+
+        @include tablet {
+            margin-bottom: 1.5rem;
+        }
     }
 
     &__category {
@@ -34,6 +47,12 @@
 
     &__list {
 
+        @include tablet {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 100%;
+        }
     }
 
     &__animal {
@@ -41,6 +60,10 @@
         border: 1px solid $button-highlight;
         margin-bottom: 1rem;
         padding: 1rem;
+
+        @include tablet {
+            height: 23.75rem;
+        }
 
         &:hover {
             color: $secondary-highlight;
@@ -50,6 +73,11 @@
 
         &-link {
             text-decoration: inherit;
+
+            @include tablet {
+                width: 48%;
+                height: 25.5rem;
+            }
         }
 
         &__image {

@@ -41,34 +41,32 @@ class AnimalDetailsPage extends Component {
                         <p className="animal__scientific-name">{animalDetails.scientificName}</p>
                     </div>
                     <div className="animal__landscape">
-                    <div class="line right">
-                                <div class="scanner"></div>
-                            </div>
+                        <div class="line right">
+                            <div class="scanner"></div>
+                        </div>
                         <LandscapeRender animal={animalDetails.id} />
                     </div>
-                    <div className="animal__info">
-                        <div className="animal__stats">
-                            <p className="animal__status">{animalDetails.category}</p>
-                            <p className="animal__population">Population: {animalDetails.population}</p>
-                            <p className="animal__habitat">Habitat: {animalDetails.habitat}</p>
-                        </div>
-                        <div className="animal__bio">
+                    <div className="animal__stats">
+                        <p className="animal__status">{animalDetails.category}</p>
+                        <p className="animal__population">Population: {animalDetails.population}</p>
+                        <p className="animal__habitat">Habitat: {animalDetails.habitat}</p>
+                    </div>
+                    <div className="animal__bio">
                         <div class="line right">
-                                <div class="scanner"></div>
-                            </div>
-                            <p className="animal__description">{animalDetails.information}</p>
-                            <p className="animal__source">Source: {animalDetails.source}</p>
+                            <div class="scanner"></div>
                         </div>
-                        <div className="animal__help">
-                            <h4 className="animal__help__title">HOW TO HELP</h4>
-                            <div className="animal__help__resources">
-                                <a href={animalDetails.petition} target="_blank" className="animal__help__link">
-                                    <button className="animal__help__button">PETITION</button>
-                                </a>
-                                <a href={animalDetails.donate} target="_blank" className="animal__help__link">
-                                    <button className="animal__help__button">DONATE</button>
-                                </a>
-                            </div>
+                        <p className="animal__description">{animalDetails.information}</p>
+                        <p className="animal__source">Source: {animalDetails.source}</p>
+                    </div>
+                    <div className="animal__help">
+                        <h4 className="animal__help__title">HOW TO HELP</h4>
+                        <div className="animal__help__resources">
+                            <a href={animalDetails.petition} target="_blank" className="animal__help__link">
+                                <button className="animal__help__button">PETITION</button>
+                            </a>
+                            <a href={animalDetails.donate} target="_blank" className="animal__help__link">
+                                <button className="animal__help__button">DONATE</button>
+                            </a>
                         </div>
                     </div>
                 </div>
