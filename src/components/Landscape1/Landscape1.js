@@ -31,7 +31,7 @@ function Landscape1() {
           <Environment background>
             <mesh>
               <sphereGeometry args={[50, 100, 100]}/>
-              <meshBasicMaterial color="#607d8b" side={THREE.BackSide}/>
+              <meshBasicMaterial color="#78909c" side={THREE.BackSide}/>
             </mesh>
           </Environment>
 
