@@ -1,3 +1,11 @@
+@use '../../styles/partials/colors' as *;
+
 .landscape {
     height: 100%;
+
+    &__canvas {
+        border-radius: 4px;
+        border: 1px solid $primary-highlight;
+        box-shadow: 0 0 5px $secondary-highlight;
+    }
 }

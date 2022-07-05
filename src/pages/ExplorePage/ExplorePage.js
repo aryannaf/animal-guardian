@@ -42,12 +42,6 @@ class ExplorePage extends Component {
         <div className="explore__container">
           <p className="explore__guide">Explore wildlife species by conservation status or click <span className="explore__guide--discover">DISCOVER </span>to learn about a new animal.</p>
           <div className="explore__options">
-            <NavLink to={`/animals/${this.randomize(60)}`} className="explore__button-link">
-              <button className="explore__button">DISCOVER</button>
-            </NavLink>
-            <NavLink to="/animals" className="explore__button-link">
-              <button className="explore__button">ALL</button>
-            </NavLink>
             <div className="explore__categories">
               {
                 categories.map((category) => {
@@ -59,6 +53,12 @@ class ExplorePage extends Component {
                 })
               }
             </div>
+            <NavLink to="/animals" className="explore__button-link">
+              <button className="explore__button">ALL</button>
+            </NavLink>
+            <NavLink to={`/animals/${this.randomize(60)}`} className="explore__button-link">
+              <button className="explore__button">DISCOVER</button>
+            </NavLink>
           </div>
         </div>
       </main>
