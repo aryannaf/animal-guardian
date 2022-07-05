@@ -13,6 +13,10 @@
       padding: 0 1rem;
     }
 
+    @include desktop {
+      padding: 0 1.5rem;
+    }
+
     &__container {
         border: 3px solid $primary-highlight;
         box-shadow: 0 0 5px $secondary-highlight;
@@ -25,6 +29,10 @@
         @include tablet {
           padding: 1.5rem;
         }
+
+        @include desktop {
+          padding: 3rem;
+        }
     }
 
     &__heading {
@@ -32,6 +40,11 @@
         border: 1px solid $primary-highlight;
         padding: 1rem;
         margin-bottom: 1rem;
+
+        @include desktop {
+          padding: 1.5rem 2rem;
+          margin-bottom: 2rem;
+        }
     }
 
     &__welcome {
@@ -48,6 +61,10 @@
         letter-spacing: .4rem;
         margin-bottom: 0;
         text-shadow: 0 0 5px $secondary-highlight;
+
+        @include desktop {
+          font-size: 2rem;
+        }
     }
 
     &__about {
@@ -56,6 +73,11 @@
         padding: 1rem;
         padding-bottom: 0;
         margin-bottom: 1rem;
+
+        @include desktop {
+          padding: 2rem;
+          margin-bottom: 2rem;
+        }
     }
 
     &__description {
@@ -74,6 +96,11 @@
         font-weight: 500;
         cursor: pointer;
 
+        @include desktop {
+          height: 4rem;
+          width: 35%;
+        }
+
         &:hover {
             color: $secondary-highlight;
             box-shadow: 0 0 5px $secondary-highlight;
@@ -81,7 +108,11 @@
         }
 
         &-link {
-
+          @include desktop {
+            display: flex;
+            justify-content: flex-end;
+            text-decoration: inherit;
+          }
         }
     }
 }

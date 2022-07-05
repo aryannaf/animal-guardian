@@ -12,6 +12,10 @@
         padding: 0 1rem;
     }
 
+    @include desktop {
+        padding: 0 1.5rem;
+    }
+
     &__container {
         border: 3px solid $primary-highlight;
         box-shadow: 0 0 5px $secondary-highlight;
@@ -25,6 +29,10 @@
         @include tablet {
             padding: 1.5rem;
         }
+
+        @include desktop {
+            padding: 3rem;
+        }
     }
 
     &__title {
@@ -36,6 +44,10 @@
         @include tablet {
             margin-bottom: 1.5rem;
         }
+
+        @include desktop {
+            padding: 1rem 2rem;
+        }
     }
 
     &__category {
@@ -43,6 +55,11 @@
         font-size: 1.75rem;
         letter-spacing: .4rem;
         font-weight: 600;
+        text-shadow: 0 0 5px $secondary-highlight;
+
+        @include desktop {
+            font-size: 2rem;
+        }
     }
 
     &__list {
@@ -77,6 +94,10 @@
             @include tablet {
                 width: 48%;
                 height: 25.5rem;
+            }
+
+            @include desktop {
+                width: 32%;
             }
         }
 
