@@ -32,10 +32,6 @@
         font-weight: 600;
     }
 
-    &__list {
-
-    }
-
     &__animal {
         border-radius: 4px;
         border: 1px solid $button-highlight;
@@ -57,10 +53,6 @@
             border-radius: 4px;
             height: 15rem;
             box-shadow: 0 0 5px $secondary-highlight;
-        }
-
-        &__info {
-
         }
 
         &__name {

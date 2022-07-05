@@ -23,8 +23,13 @@
         border-bottom: none;
         border-radius: 4px;
         padding: 1rem;
+        padding-bottom: 5rem;
         background-color: $primary-background;
         width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
         @include tablet {
             padding: 1.5rem;
@@ -37,6 +42,25 @@
       }
     }
 
+    &__wrapper {
+      position: relative;
+      max-width: 28rem;
+      display: flex;
+    }
+
+    &__circle-container {
+      @include on-circle($item-count: 6, $circle-size: 20em, $item-size: 8em); 
+      margin: 5em auto 0;
+
+      @include tablet {
+        @include on-circle($item-count: 6, $circle-size: 28em, $item-size: 10em);
+      }
+
+      @include desktop {
+        @include on-circle($item-count: 6, $circle-size: 32em, $item-size: 12em);
+      }
+    }
+
     &__guide {
         color: $primary-text;
         font-weight: 300;
@@ -45,6 +69,7 @@
         border-radius: 4px;
         border: 1px solid $primary-highlight;
         padding: 1rem;
+        width: 100%;
 
         @include tablet {
             margin-bottom: 4rem;
@@ -57,14 +82,10 @@
         }
     }
 
-    &__options {
-        
-    }
-
     &__button {
         height: 4rem;
         width: 100%;
-        border-radius: 4px;
+        border-radius: 50px;
         border: 1px solid $button-highlight;
         background-color: $primary-background;
         color: $button-highlight;
@@ -86,25 +107,12 @@
             box-shadow: 0 0 5px $secondary-highlight;
             text-shadow: 0 0 5px $secondary-highlight;
         }
-
-        &-link {
-
-        }
-    }
-
-    &__categories {
-
-        @include tablet {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
     }
 
     &__category {
         height: 4rem;
         width: 100%;
-        border-radius: 4px;
+        border-radius: 50px;
         border: 1px solid $button-highlight;
         background-color: $primary-background;
         color: $button-highlight;
@@ -140,149 +148,57 @@
 }
 
 
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #ededed00;
+  position: absolute;
+  top: 7.25rem;
+  left: 4rem;
 
-:root {
-    --base-grid: 8px;
-    --colour-white: $primary-background;
-    --colour-black: #1a1a1a;
+  @include tablet {
+    top: 10.5rem;
+    left: 8rem;
   }
-  
-  *, :after, :before {
-      box-sizing: border-box;
+
+  @include desktop {
+    top: 11.25rem;
+    left: 8rem;
   }
-  
-  html {
-    margin: 0;
-    padding: 0;
-    background-image: linear-gradient(-170deg,#064997 20%,#105ba7);
-    background-position: 100%;
-  }
-  
-  body {
-    background-image: linear-gradient(270deg,#2b67ac 3px,transparent 0),linear-gradient(#2b67ac 3px,transparent 0),linear-gradient(270deg,rgba(43,103,172,.4) 1px,transparent 0),linear-gradient(#2b67ac 1px,transparent 0),linear-gradient(270deg,rgba(43,103,172,.4) 1px,transparent 0),linear-gradient(#2b67ac 1px,transparent 0);
-    background-size: 112px 112px,112px 112px,56px 56px,56px 56px,28px 28px,28px 28px;
-    font-family: Josefin Sans, sans-serif;
-      margin: 0;
-    padding: 0;
-  }
-  
-  .links {
-    --link-size: calc(var(--base-grid)*20);
-    color: var(--colour-black);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    min-height: 100vh;
-  }
-  
-  .links__list {
-    position: relative;
-    list-style: none;
-  }
-  
-  .links__item {
-    width: var(--link-size);
-    height: var(--link-size);
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin-top: calc(var(--link-size)/-2);
-    margin-left: calc(var(--link-size)/-2);
-    --angle: calc(360deg/var(--item-total));
-    --rotation: calc(140deg + var(--angle)*var(--item-count));
-    transform: rotate(var(--rotation)) translate(calc(var(--link-size) + var(--base-grid)*2)) rotate(calc(var(--rotation)*-1));
-  }
-  
-  .links__link {
-    opacity: 0;
-    animation: on-load .3s ease-in-out forwards;
-    animation-delay: calc(var(--item-count)*150ms);
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    position: relative;
-    background-color: var(--colour-white);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    color: inherit;
-  }
-  
-  .links__icon {
-    width: calc(var(--base-grid)*8);
-    height: calc(var(--base-grid)*8);
-    transition: all .3s ease-in-out;
-    fill: var(--colour-black);
-  }
-  
-  .links__text {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    text-align: center;
-    height: calc(var(--base-grid)*2);
-    font-size: calc(var(--base-grid)*2);
-    display: none;
-    bottom: calc(var(--base-grid)*8.5);
-    animation: text .3s ease-in-out forwards;
-  }
-  
-  .links__link:after {
-    content: "";
-    background-color: transparent;
-    width: var(--link-size);
-    height: var(--link-size);
-    border: 2px dashed var(--colour-white);
-    display: block;
-    border-radius: 50%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: all .3s cubic-bezier(.53,-.67,.73,.74);
-    transform: none;
-    opacity: 0;
-  }
-  
-  .links__link:hover .links__icon {
-    transition: all .3s ease-in-out;
-    transform: translateY(calc(var(--base-grid)*-1));
-  }
-  
-  .links__link:hover .links__text {
-    display: block;
-  }
-  
-  .links__link:hover:after {
-    transition: all .3s cubic-bezier(.37,.74,.15,1.65);
-    transform: scale(1.1);
-    opacity: 1;
-  }
-  
-  @keyframes on-load {
-    0% {
-      opacity: 0;
-      transform: scale(.3);
-    }
-    70% {
-      opacity: .7;
-      transform: scale(1.1);
-    }
-    100% {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-  
-  @keyframes text {
-    0% {
-      opacity: 0;
-      transform: scale(0.3) translateY(0);
-    }
-    100% {
-      opacity: 1;
-      transform: scale(1) translateY(calc(var(--base-grid)*5));
-    }
-  }
+}
+
+.menu-button{
+	transition: fill 500ms;
+}
+
+.outer-circle {
+	transform-origin: 60px 60px;
+	transition: transform 2s cubic-bezier(0.620, 0.005, 0.000, 1.005);
+}
+
+.button {
+	max-width: 12rem;
+	background: none;
+	border: 0 none;
+	font-size: 0;
+	cursor: pointer;
+	
+	svg {
+		width: 100%;
+		height: auto;
+	}
+	
+	&:hover {
+		
+		.menu-button {
+			fill: red;
+		}
+		
+		.outer-circle {
+			transform: rotate(360deg);
+		}
+		
+	}
+	
+}

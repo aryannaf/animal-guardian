@@ -28,6 +28,7 @@
 
         @include tablet {
           padding: 1.5rem;
+          padding-top: 3.25rem;
         }
 
         @include desktop {
@@ -41,9 +42,13 @@
         padding: 1rem;
         margin-bottom: 1rem;
 
+        @include tablet {
+          margin-bottom: 2rem;
+          padding: 1.5rem;
+        }
+
         @include desktop {
           padding: 1.5rem 2rem;
-          margin-bottom: 2rem;
         }
     }
 
@@ -74,9 +79,13 @@
         padding-bottom: 0;
         margin-bottom: 1rem;
 
+        @include tablet {
+          margin-bottom: 2rem;
+          padding: 1.5rem;
+        }
+
         @include desktop {
           padding: 2rem;
-          margin-bottom: 2rem;
         }
     }
 
@@ -95,6 +104,10 @@
         letter-spacing: .2rem;
         font-weight: 500;
         cursor: pointer;
+
+        @include tablet {
+          margin-bottom: 2rem;
+        }
 
         @include desktop {
           height: 4rem;
