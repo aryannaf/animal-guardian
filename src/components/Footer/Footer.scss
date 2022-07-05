@@ -1,0 +1,33 @@
+@use '../../styles/global.scss' as *;
+@use '../../styles/partials/colors' as *;
+
+.footer {
+    background: url('../../assets/images/background.jpg');
+    padding: .5rem;
+    padding-top: 0;
+    display: flex;
+    align-items: center;
+
+    &__container {
+        border: 3px solid $primary-highlight;
+        box-shadow: 0 0 5px $secondary-highlight;
+        border-top: none;
+        border-radius: 4px;
+        padding: 1rem;
+        background-color: $primary-background;
+        width: 100%;
+    }
+
+    &__copyright {
+        color: $primary-text;
+        text-align: center;
+        font-size: .55rem;
+    }
+
+    &__credits {
+        color: $primary-text;
+        text-align: center;
+        font-size: .55rem;
+        margin-bottom: 0;
+    }
+}

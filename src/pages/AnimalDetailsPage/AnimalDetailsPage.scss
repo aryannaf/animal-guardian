@@ -7,8 +7,7 @@
 
 .animal {
     background: url('../../assets/images/background.jpg');
-    padding: .5rem;
-    padding-top: 0;
+    padding: 0 .5rem;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -17,6 +16,7 @@
         border: 3px solid $primary-highlight;
         box-shadow: 0 0 5px $secondary-highlight;
         border-top: none;
+        border-bottom: none;
         border-radius: 4px;
         padding: 1rem;
         background-color: $primary-background;

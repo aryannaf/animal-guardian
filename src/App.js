@@ -6,6 +6,7 @@ import ExplorePage from './pages/ExplorePage/ExplorePage';
 import AnimalDetailsPage from './pages/AnimalDetailsPage/AnimalDetailsPage';
 import AnimalListPage from './pages/AnimalListPage/AnimalListPage';
 import FullAnimalListPage from './pages/FullAnimalListPage/FullAnimalListPage';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/animals" exact component={FullAnimalListPage}/>
         <Route path="/animals/:speciesId" component={AnimalDetailsPage}/>
       </Switch>
+      <Footer />
     </BrowserRouter>
   );
 }
