@@ -22,6 +22,12 @@ Tech Stack Used:
 - MySQL
 
 
+Next Steps
+
+- user accounts where selected species and links can be saved for quick access
+
+
+
 ## How to run the application
 
 ### Vist `animal-guardian.herokuapp.com`
@@ -44,8 +50,3 @@ OR
 5. Type `npx node index.js` and make sure the server is running
 
 6. In the client-side command line, type `npm start` to launch the application
-
-
-Next Steps
-
-- user accounts where selected species and links can be saved for quick access
