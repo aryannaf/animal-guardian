@@ -4,7 +4,7 @@ import axios from 'axios';
 import LandscapeRender from '../../components/LandscapeRender/LandscapeRender';
 
 
-const API_URL = "http://localhost:5050";
+const API_URL = "https://animal-guardian-server.herokuapp.com/";
 
 class AnimalDetailsPage extends Component {
 
