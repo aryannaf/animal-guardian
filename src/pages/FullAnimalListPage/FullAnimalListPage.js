@@ -4,7 +4,7 @@ import axios from 'axios';
 import { NavLink } from 'react-router-dom';
 
 
-const API_URL = "https://animal-guardian-server.herokuapp.com/";
+const API_URL = "https://animal-guardian-server.herokuapp.com";
 
 class FullAnimalListPage extends Component {
 
