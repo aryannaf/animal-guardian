@@ -41,8 +41,8 @@ class AnimalDetailsPage extends Component {
                         <p className="animal__scientific-name">{animalDetails.scientificName}</p>
                     </div>
                     <div className="animal__landscape">
-                        <div class="line right">
-                            <div class="scanner"></div>
+                        <div className="line right">
+                            <div className="scanner"></div>
                         </div>
                         <LandscapeRender animal={animalDetails.id} />
                     </div>
@@ -52,8 +52,8 @@ class AnimalDetailsPage extends Component {
                         <p className="animal__habitat">Habitat: {animalDetails.habitat}</p>
                     </div>
                     <div className="animal__bio">
-                        <div class="line right">
-                            <div class="scanner"></div>
+                        <div className="line right">
+                            <div className="scanner"></div>
                         </div>
                         <p className="animal__description">{animalDetails.information}</p>
                         <p className="animal__source">Source: {animalDetails.source}</p>
