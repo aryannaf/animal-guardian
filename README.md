@@ -49,4 +49,6 @@ OR
 
 5. Type `npx node index.js` and make sure the server is running
 
-6. In the client-side command line, type `npm start` to launch the application
+6. Ensure the PORT you chose matches the client-side PORT for the API URLs
+
+7. In the client-side command line, type `npm start` to launch the application
