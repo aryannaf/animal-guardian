@@ -1,7 +1,7 @@
 <img width="506" alt="logo" src="https://user-images.githubusercontent.com/102264671/177438348-a5945ced-82c0-4ded-b5c3-a4325ef95589.png">
 
 
-An educational awareness tool that utilizes 3D animal renders to challenge the disconnect between humans and endangered wildlife and go beyond a 2D image. Learn about Earth's endangered species and explore ways you can help.
+An educational awareness tool that utilizes interactive 3D animal renders to challenge the disconnect between humans and endangered wildlife and go beyond a 2D image. Learn about Earth's endangered species and explore ways you can help.
 
 
 Features:
@@ -10,6 +10,10 @@ Features:
 - Discover animals (random species generator)
 - Interactive 3D model
 - Links to petitions and donation sites
+
+
+![animal-guardian](https://user-images.githubusercontent.com/102264671/177769013-e8343de2-ce24-497f-bac9-d553e050be6e.png)
+
 
 
 Tech Stack Used:
@@ -47,7 +51,7 @@ OR
 
 4. Create a ".env" file in the server, and set a PORT following the guidelines in the ".env.sample" file
 
-5. Type `npx node index.js` and make sure the server is running
+5. Type `node index.js` and make sure the server is running
 
 6. Ensure the PORT you chose matches the client-side PORT for the API URLs
 
