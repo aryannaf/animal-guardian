@@ -40,9 +40,9 @@ OR
 
 ### Follow these steps:
 
-1. Clone both the `animal-guardian` and `animal-guardian-server` repositories and open in an IDE
+1. Clone both the `animal-guardian` and `animal-guardian-server` repositories
 
-2. Type `npm i` in the command line to install all dependencies
+2. Type `npm i` in the command line for each folder to install all dependencies
 
 3. In the server command line, type:
 
@@ -53,6 +53,6 @@ OR
 
 5. Type `node index.js` and make sure the server is running
 
-6. Ensure the PORT you chose matches the client-side PORT for the API URLs
+6. Ensure the PORT you choose matches the client-side localhost PORT for the API URLs
 
 7. In the client-side command line, type `npm start` to launch the application
