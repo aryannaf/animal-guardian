@@ -7,6 +7,7 @@ import AnimalDetailsPage from './pages/AnimalDetailsPage/AnimalDetailsPage';
 import AnimalListPage from './pages/AnimalListPage/AnimalListPage';
 import FullAnimalListPage from './pages/FullAnimalListPage/FullAnimalListPage';
 import Footer from './components/Footer/Footer';
+import RandomAnimalDetailsPage from './pages/RandomAnimalDetailsPage/RandomAnimalDetailsPage';
 
 function App() {
   return (
@@ -17,7 +18,8 @@ function App() {
         <Route path="/explore" component={ExplorePage}/>
         <Route path="/categories/:categoryId" component={AnimalListPage}/>
         <Route path="/animals" exact component={FullAnimalListPage}/>
-        <Route path="/animals/:speciesId" component={AnimalDetailsPage}/>
+        <Route path="/animals/:speciesId" exact component={AnimalDetailsPage}/>
+        <Route path="/animals/random/:speciesId" component={RandomAnimalDetailsPage}/>
       </Switch>
       <Footer />
     </BrowserRouter>
