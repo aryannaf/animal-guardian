@@ -25,8 +25,10 @@ class ExplorePage extends Component {
       })
   }
 
-  randomize = (max) => {
-    return Math.floor(Math.random() * max);
+  randomize = (min, max) => {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min) + min);
   }
 
   render() {
@@ -61,7 +63,7 @@ class ExplorePage extends Component {
                 </NavLink>
               </li>
               <li className="explore__item">
-                <NavLink to={`/animals/${this.randomize(60)}`} className="explore__button-link">
+                <NavLink to={`/animals/random/${this.randomize(1, 62)}`} className="explore__button-link">
                   <button className="explore__button">DISCOVER</button>
                 </NavLink>
               </li>
