@@ -49,7 +49,7 @@
     }
 
     &__circle-container {
-      @include on-circle($item-count: 6, $circle-size: 20em, $item-size: 8em); 
+      @include on-circle($item-count: 6, $circle-size: 15em, $item-size: 6em); 
       margin: 5em auto 0;
 
       @include tablet {
@@ -93,14 +93,16 @@
         font-weight: 500;
         cursor: pointer;
         margin-bottom: 1rem;
+        font-size: .5rem;
 
         @include tablet {
             margin-bottom: 1.5rem;
+            font-size: .85rem;
         }
 
         @include desktop {
           margin-bottom: 2rem;
-      }
+        }
 
         &:hover {
             color: $secondary-highlight;
@@ -120,9 +122,11 @@
         font-weight: 500;
         cursor: pointer;
         margin-bottom: 1rem;
+        font-size: .5rem;
 
         @include tablet {
             margin-bottom: 1.5rem;
+            font-size: .85rem;
         }
 
         @include desktop {
@@ -154,8 +158,8 @@
 	justify-content: center;
 	background-color: #ededed00;
   position: absolute;
-  top: 7.25rem;
-  left: 4rem;
+  top: 7.8rem;
+  left: 3.5rem;
 
   @include tablet {
     top: 10.5rem;
@@ -178,11 +182,15 @@
 }
 
 .button {
-	max-width: 12rem;
+	max-width: 8rem;
 	background: none;
 	border: 0 none;
 	font-size: 0;
 	cursor: pointer;
+
+  @include tablet {
+    max-width: 12rem;
+  }
 	
 	svg {
 		width: 100%;
