@@ -36,23 +36,4 @@ Next Steps
 
 ### Vist `animal-guardian.herokuapp.com`
 
-OR
 
-### Follow these steps:
-
-1. Clone both the `animal-guardian` and `animal-guardian-server` repositories
-
-2. Type `npm i` in the command line for each folder to install all dependencies
-
-3. In the server command line, type:
-
-- `npx knex migrate:latest`
-- `npx knex seed:run`
-
-4. Create a ".env" file in the server, and set a PORT following the guidelines in the ".env.sample" file
-
-5. Type `node index.js` and make sure the server is running
-
-6. Ensure the PORT you choose matches the client-side localhost PORT for the API URLs
-
-7. In the client-side command line, type `npm start` to launch the application
