@@ -2,6 +2,7 @@ import axios from 'axios';
 import { Component } from 'react';
 import './AnimalListPage.scss';
 import { NavLink } from 'react-router-dom';
+import Loading from '../../components/Loading/Loading';
 
 
 const API_URL = "https://animal-guardian-server.herokuapp.com";
@@ -31,7 +32,7 @@ class AnimalListPage extends Component {
     const { species } = this.state;
 
     if (!species) {
-      return <main>Loading, please wait...</main>;
+      return <main><Loading /></main>;
     }
 
     return (

@@ -2,6 +2,7 @@ import { Component } from 'react';
 import './AnimalDetailsPage.scss';
 import axios from 'axios';
 import LandscapeRender from '../../components/LandscapeRender/LandscapeRender';
+import Loading from '../../components/Loading/Loading';
 
 
 const API_URL = "https://animal-guardian-server.herokuapp.com";
@@ -30,7 +31,7 @@ class AnimalDetailsPage extends Component {
         const { animalDetails } = this.state;
 
         if (!animalDetails) {
-            return <main>Loading, please wait...</main>;
+            return <main><Loading /></main>;
         }
 
         return (
