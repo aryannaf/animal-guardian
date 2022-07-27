@@ -2,6 +2,7 @@ import { Component } from 'react';
 import './ExplorePage.scss';
 import { NavLink } from 'react-router-dom';
 import axios from 'axios';
+import Loading from '../../components/Loading/Loading';
 
 
 const API_URL = "https://animal-guardian-server.herokuapp.com";
@@ -36,7 +37,7 @@ class ExplorePage extends Component {
     const { categories } = this.state;
 
     if (!categories) {
-      return <main>Loading, please wait...</main>
+      return <main><Loading /></main>;
     }
 
     return (
